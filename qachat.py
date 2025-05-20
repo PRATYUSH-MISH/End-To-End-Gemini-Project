@@ -8,7 +8,7 @@ import google.generativeai as genai
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 ## function to load Gemini Pro model and get repsonses
-model=genai.GenerativeModel("gemini-pro") 
+model=genai.GenerativeModel("models/gemini-2.0-flash-lite") 
 chat = model.start_chat(history=[])
 def get_gemini_response(question):
     
@@ -45,4 +45,3 @@ for role, text in st.session_state['chat_history']:
 
 
     
-
